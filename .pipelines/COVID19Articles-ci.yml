@@ -44,16 +44,16 @@ stages:
           # Invoke the Python building and publishing a training pipeline
           python -m COVID19Articles.ml_service.pipelines.COVID19Articles_build_train_pipeline
       displayName: 'Publish Azure Machine Learning Pipeline'
-
+      
   - job: "Validate_Code_Quality"
     dependsOn: "Model_CI_Pipeline"
     displayName: "Validate code quality"
     timeoutInMinutes: 15
     pool: server
     steps:
-     - task: ManualValidation@0
-       timeoutInMinutes: 10
-       inputs:
+    - task: ManualValidation@0
+      timeoutInMinutes: 10
+      inputs:
         notifyUsers: |
           odl_user_557244@msazurelabs.onmicrosoft.com
         instructions: 'Please validate the code quality analysis results and resume.'
