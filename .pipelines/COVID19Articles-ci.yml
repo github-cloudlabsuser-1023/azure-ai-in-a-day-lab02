@@ -55,7 +55,7 @@ stages:
     timeoutInMinutes: 10
     inputs:
         notifyUsers: |
-         odl_user_557244@msazurelabs.onmicrosoft.com
+         odl_user_XXXXXX@msazurelabs.onmicrosoft.com
         instructions: 'Please validate the code quality analysis results and resume.'
         onTimeout: reject
 
